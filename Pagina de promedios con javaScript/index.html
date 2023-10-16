@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/estilos.css">
+    <title>promedios</title>
+  </head>
+
+  
+  <body>
+    <header>
+        <nav>
+            <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="https://github.com/Mariomoreno4">Mi Formulario</a></li>
+            <li><a href="cv.html">Mi CV</a></l>
+        
+         </ul>
+        </nav>
+      </header>
+
+        <form class="form">
+        <label for="text">cuantas materias tuviste en el semestre?</label>
+        <input type="number" id="materias" />
+        <input type="button" onclick="pluss();" value="Promedio" />
+        <br><br>
+        <label for="text" id="muestra" style="display:none">empieza poner tus calificaciones</label>
+        
+    
+    
+            <label id="uno2" for="text" style="display:none">primer materia</label>
+            <input id="uno" type="number" style="display:none" min="0" max="10"/>
+          
+            <label id="dos2" for="text" style="display:none">segunda materia</label>
+            <input id="dos" type="number" style="display:none" min="0" max="10"/>
+          
+            <label id="tres2" for="text" style="display:none">tercera materia</label>
+            <input id="tres" type="number" style="display:none" min="0" max="10"/>
+          
+            <label id="cuatro2" for="text" style="display:none">cuarta materia</label>
+            <input id="cuatro" type="number" style="display:none" min="0" max="10"/>
+          
+            <label id="cinco2" for="text" style="display:none">quinta materia</label>
+            <input id="cinco" type="number"style="display:none" min="0" max="10"/>
+          
+            <label id="seis2" for="text" style="display:none">sexta materia</label>
+            <input id="seis" type="number"style="display:none" min="0" max="10"/>
+          
+            <label id="siete2" for="text" style="display:none">septima materia</label>
+            <input id="siete" type="number" style="display:none" min="0" max="10"/>
+          
+    
+          <input type="button" id="resul" onclick="promedio();" style="display:none" value="Resultado"  />
+        </form>
+
+    </div>
+    
+    <script type="text/javascript">
+      function pluss() {
+        document.getElementById('resul').style.display = 'block';
+        var materias = document.getElementById("materias").value;
+        document.getElementById('muestra').style.display = 'block';
+        
+
+        if (materias == 1) {
+            alert("necesito por lo menos 2 calificaciones");
+        } else if (materias == 2) {
+            document.getElementById('uno').style.display = 'block';
+            document.getElementById('uno2').style.display = 'block'
+            document.getElementById('dos2').style.display = 'block';
+            document.getElementById('dos').style.display = 'block';
+            document.getElementById('tres2').style.display = 'none';
+            document.getElementById('tres').style.display = 'none';
+            document.getElementById('cuatro2').style.display = 'none';
+            document.getElementById('cuatro').style.display = 'none';
+            document.getElementById('cinco2').style.display = 'none';
+            document.getElementById('cinco').style.display = 'none';
+            document.getElementById('seis2').style.display = 'none';
+            document.getElementById('seis').style.display = 'none';
+            document.getElementById('siete2').style.display = 'none';
+            document.getElementById('siete').style.display = 'none';
+        } else if (materias == 3) {
+            document.getElementById('uno').style.display = 'block';
+            document.getElementById('uno2').style.display = 'block'
+            document.getElementById('dos2').style.display = 'block';
+            document.getElementById('dos').style.display = 'block';
+            document.getElementById('tres2').style.display = 'block';
+            document.getElementById('tres').style.display = 'block';
+            document.getElementById('cuatro2').style.display = 'none';
+            document.getElementById('cuatro').style.display = 'none';
+            document.getElementById('cinco2').style.display = 'none';
+            document.getElementById('cinco').style.display = 'none';
+            document.getElementById('seis2').style.display = 'none';
+            document.getElementById('seis').style.display = 'none';
+            document.getElementById('siete2').style.display = 'none';
+            document.getElementById('siete').style.display = 'none';
+        }else if(materias==4){
+            document.getElementById('uno').style.display = 'block';
+            document.getElementById('uno2').style.display = 'block'
+            document.getElementById('dos2').style.display = 'block';
+            document.getElementById('dos').style.display = 'block';
+            document.getElementById('tres2').style.display = 'block';
+            document.getElementById('tres').style.display = 'block';
+            document.getElementById('cuatro2').style.display = 'block';
+            document.getElementById('cuatro').style.display = 'block';
+            document.getElementById('cinco2').style.display = 'none';
+            document.getElementById('cinco').style.display = 'none';
+            document.getElementById('seis2').style.display = 'none';
+            document.getElementById('seis').style.display = 'none';
+            document.getElementById('siete2').style.display = 'none';
+            document.getElementById('siete').style.display = 'none';
+
+        }if (materias == 5) {
+            document.getElementById('uno').style.display = 'block';
+            document.getElementById('uno2').style.display = 'block'
+            document.getElementById('dos2').style.display = 'block';
+            document.getElementById('dos').style.display = 'block';
+            document.getElementById('tres2').style.display = 'block';
+            document.getElementById('tres').style.display = 'block';
+            document.getElementById('cuatro2').style.display = 'block';
+            document.getElementById('cuatro').style.display = 'block';
+            document.getElementById('cinco2').style.display = 'block';
+            document.getElementById('cinco').style.display = 'block';
+            document.getElementById('seis2').style.display = 'none';
+            document.getElementById('seis').style.display = 'none';
+            document.getElementById('siete2').style.display = 'none';
+            document.getElementById('siete').style.display = 'none';
+            
+        } else if (materias == 6) {
+            document.getElementById('uno').style.display = 'block';
+            document.getElementById('uno2').style.display = 'block'
+            document.getElementById('dos2').style.display = 'block';
+            document.getElementById('dos').style.display = 'block';
+            document.getElementById('tres2').style.display = 'block';
+            document.getElementById('tres').style.display = 'block';
+            document.getElementById('cuatro2').style.display = 'block';
+            document.getElementById('cuatro').style.display = 'block';
+            document.getElementById('cinco2').style.display = 'block';
+            document.getElementById('cinco').style.display = 'block';
+            document.getElementById('seis2').style.display = 'block';
+            document.getElementById('seis').style.display = 'block';
+            document.getElementById('siete2').style.display = 'none';
+            document.getElementById('siete').style.display = 'none';
+        } else if (materias == 7) {
+            document.getElementById('uno').style.display = 'block';
+            document.getElementById('uno2').style.display = 'block'
+            document.getElementById('dos2').style.display = 'block';
+            document.getElementById('dos').style.display = 'block';
+            document.getElementById('tres2').style.display = 'block';
+            document.getElementById('tres').style.display = 'block';
+            document.getElementById('cuatro2').style.display = 'block';
+            document.getElementById('cuatro').style.display = 'block';
+            document.getElementById('cinco2').style.display = 'block';
+            document.getElementById('cinco').style.display = 'block';
+            document.getElementById('seis2').style.display = 'block';
+            document.getElementById('seis').style.display = 'block';
+            document.getElementById('siete2').style.display = 'block';
+            document.getElementById('siete').style.display = 'block';
+        }else if(materias>10){
+            alert("Es el limite de materias, SOLO DE 1 A 7");
+            document.getElementById('muestra').style.display = 'none';
+            document.getElementById('resul').style.display = 'none';
+        }
+      }
+
+      function promedio(){
+        var materias = document.getElementById("materias").value;
+
+        var uno = parseFloat(document.getElementById("uno").value);
+        var dos =parseFloat(document.getElementById("dos").value);
+        var tres =parseFloat(document.getElementById("tres").value);
+        var cuatro =parseFloat(document.getElementById("cuatro").value);
+        var cinco =parseFloat(document.getElementById("cinco").value);
+        var seis =parseFloat(document.getElementById("seis").value);
+        var siete =parseFloat(document.getElementById("siete").value);
+
+        var Resultado;
+        if(materias==2){
+
+            Resultado=uno+dos;
+            Resultado=Resultado/2
+            alert("tu promedio es " + Resultado);
+
+        } else if(materias==3){
+
+            Resultado=uno+dos+tres;
+            Resultado=Resultado/3;
+            alert("tu promedio es" + Resultado);
+
+        } else if(materias==4){
+
+            Resultado=uno+dos+tres+cuatro;
+            Resultado=Resultado/4;
+
+            alert("tu promedio es" + Resultado);
+
+        } else if(materias==5){
+
+            Resultado=uno+dos+tres+cuatro+cinco;
+            Resultado=Resultado/5;
+
+            alert("tu promedio es" + Resultado);
+
+        } else if(materias==6){
+
+            Resultado=uno+dos+tres+cuatro+cinco+seis;
+            Resultado=Resultado/6;
+
+            alert("tu promedio es" + Resultado);
+
+        } else if(materias==7){
+
+            Resultado=uno+dos+tres+cuatro+cinco+seis+siete;
+            Resultado=Resultado/7;
+
+            alert("tu promedio es" + Resultado);
+
+        }
+      }
+    </script>
+
+    
+  </body>
+</html>
